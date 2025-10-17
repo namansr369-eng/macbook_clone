@@ -154,23 +154,24 @@ body {
         @apply text-xs text-white bg-black/20 px-2 py-1 rounded-lg;
       }
 
+      .active {
+          @apply ring-2 size-8 ring-white;
+        }
+
       .color-control {
-        @apply flex-between bg-neutral-800 rounded-full px-6 py-3 gap-4;
+        @apply flex-between bg-neutral-800 rounded-full px-6 py-3 gap-4 shadow-sm shadow-zinc-700;
 
         div {
-          @apply size-7 rounded-full cursor-pointer;
+          @apply size-7 rounded-full cursor-pointer active:scale-95 transition-all duration-100 shadow-md shadow-black;
         }
 
-        .active {
-          @apply ring-5 size-5 ring-light-100;
-        }
       }
 
       .size-control {
-        @apply small-medium flex-between bg-neutral-800 rounded-full px-6 py-2.5 gap-2;
+        @apply small-medium flex-between bg-neutral-800 rounded-full px-6 py-3 gap-4 shadow-sm shadow-zinc-700;
 
         div {
-          @apply size-8 rounded-full cursor-pointer bg-white text-black flex-center;
+          @apply size-7 rounded-full cursor-pointer bg-zinc-300 text-black flex-center active:scale-95 transition-all duration-100 shadow-md shadow-black;
         }
       }
     }
