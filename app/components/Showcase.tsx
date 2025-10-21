@@ -14,6 +14,8 @@ const Showcase = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
+        console.log("checking isTablet:", isTablet)
+        if(!isTablet){
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#showcase .media",
@@ -28,6 +30,7 @@ const Showcase = () => {
                     ease: "power1.inOut",
                 })
                 .to('.content', { opacity: 1, y: 0, ease: 'sine.out'});
+        }
         
     },{scope: containerRef, dependencies:[isTablet], revertOnUpdate: true});
 
