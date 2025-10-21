@@ -3,8 +3,9 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
  
 export const metadata: Metadata = {
   title: "Create Next App",
